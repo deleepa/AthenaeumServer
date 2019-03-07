@@ -1,0 +1,14 @@
+D:\Playground\qna-platform-server\bin\Debug\netcoreapp2.2\qna-platform-server.deps.json
+D:\Playground\qna-platform-server\bin\Debug\netcoreapp2.2\qna-platform-server.runtimeconfig.json
+D:\Playground\qna-platform-server\bin\Debug\netcoreapp2.2\qna-platform-server.runtimeconfig.dev.json
+D:\Playground\qna-platform-server\bin\Debug\netcoreapp2.2\qna-platform-server.dll
+D:\Playground\qna-platform-server\bin\Debug\netcoreapp2.2\qna-platform-server.pdb
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.csprojAssemblyReference.cache
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.csproj.CoreCompileInputs.cache
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.RazorAssemblyInfo.cache
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.RazorAssemblyInfo.cs
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.AssemblyInfoInputs.cache
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.AssemblyInfo.cs
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.RazorTargetAssemblyInfo.cache
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.dll
+D:\Playground\qna-platform-server\obj\Debug\netcoreapp2.2\qna-platform-server.pdb
