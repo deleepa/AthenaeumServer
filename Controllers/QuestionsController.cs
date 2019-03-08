@@ -15,6 +15,7 @@ namespace qna_platform_server.Controllers
 
         public IActionResult Get()
         {
+            //Response.Headers.Add("Access-Control-Allow-Origin", "*");
             return Ok(qsService.GetQuestions());
         }
 
@@ -22,6 +23,7 @@ namespace qna_platform_server.Controllers
         [Route("{id}")]
         public IActionResult Get(int id)
         {
+            //Response.Headers.Add("Access-Control-Allow-Origin", "*");
             return Ok(qsService.GetQuestionById(id));
         }
     }
