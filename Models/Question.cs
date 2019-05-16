@@ -3,18 +3,19 @@ using System.Collections.Generic;
 
 namespace AthenaeumServer.Models
 {
-    public partial class Answer
+    public partial class Question
     {
-        public Answer()
+        public Question()
         {
             QuestionAnswer = new HashSet<QuestionAnswer>();
         }
 
-        public int Id { get; set; }
-        public string Text { get; set; }
+        public string MainText { get; set; }
+        public string SecondaryText { get; set; }
         public int UserId { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int Id { get; set; }
 
         public virtual User User { get; set; }
         public virtual ICollection<QuestionAnswer> QuestionAnswer { get; set; }

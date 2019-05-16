@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using qna_platform_server.Services;
+using AthenaeumServer.Services;
 
-namespace qna_platform_server
+namespace AthenaeumServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

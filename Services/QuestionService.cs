@@ -1,14 +1,16 @@
-﻿using System;
+﻿using AthenaeumServer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace qna_platform_server.Services
+namespace AthenaeumServer.Services
 {
     public class QuestionService
     {
         public List<object> GetQuestions()
         {
+
             return new List<object> { question1, question2 };
         }
 

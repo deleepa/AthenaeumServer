@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace qna_platform_server.Services
+namespace AthenaeumServer.Services
 {
     public class AnswerService
     {

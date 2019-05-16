@@ -10,9 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using qna_platform_server.Services;
+using AthenaeumServer.Services;
 
-namespace qna_platform_server
+namespace AthenaeumServer
 {
     public class Startup
     {

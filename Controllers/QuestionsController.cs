@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using qna_platform_server.Services;
+using AthenaeumServer.Services;
 
-namespace qna_platform_server.Controllers
+namespace AthenaeumServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
