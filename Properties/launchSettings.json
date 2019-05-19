@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "qna_platform_server": {
+    "AthenaeumSever": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

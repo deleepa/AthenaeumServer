@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AthenaeumServer.Services;
+using AthenaeumServer.Models;
 
 namespace AthenaeumServer.Controllers
 {
@@ -15,16 +16,87 @@ namespace AthenaeumServer.Controllers
 
         public IActionResult Get()
         {
-            //Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            return Ok(qsService.GetQuestions());
+            try 
+            {
+                using (var db = new AthenaeumContext())
+                {
+                    var question = db.Question.ToList();
+
+                    return Ok(new {status = true, message = question});
+                }
+            }
+            catch(Exception e) 
+            {
+                return BadRequest(new {status = false, message = e.Message});
+            }
         }
 
         [HttpGet]
         [Route("{id}")]
         public IActionResult Get(int id)
         {
-            //Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            return Ok(qsService.GetQuestionById(id));
+            try 
+            {
+                using (var db = new AthenaeumContext())
+                {
+                    var question = db.Question
+                        .Where(q => q.Id == id)
+                        .First();
+
+                    return Ok(new {status = true, message = question});
+                }
+            }
+            catch(Exception e) 
+            {
+                return BadRequest(new {status = false, message = e.Message});
+            }
+        }
+
+        [HttpGet]
+        [Route("{id}/answers")]
+        public IActionResult GetAnswersForQuestion(int id)
+        {
+            try
+            {
+                using (var db = new AthenaeumContext())
+                {
+                    var answers = db.Answer
+                        .Where(a => a.QuestionId == id)
+                        .ToList();
+
+                    return Ok(new {status = true, message = answers});
+                }
+            }
+            catch(Exception e) 
+            {
+                return BadRequest(new {status = false, message = e.Message});
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Post(Question request)
+        {
+            try 
+            {
+                using (var db = new AthenaeumContext())
+                {
+                    db.Add(new Question()
+                    {
+                        CreatedDate = DateTime.Now,
+                        UpdatedDate = DateTime.Now,
+                        MainText = request.MainText,
+                        SecondaryText = request.SecondaryText,
+                        UserId = request.UserId
+                    });
+
+                    db.SaveChanges();
+                }
+                return Ok();
+            }
+            catch(Exception e) 
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

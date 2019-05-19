@@ -1,8 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using AthenaeumServer.Models;
 
-namespace AthenaeumServer.Models
+namespace AthenaeumServer
 {
     public partial class AthenaeumContext : DbContext
     {
@@ -17,14 +18,13 @@ namespace AthenaeumServer.Models
 
         public virtual DbSet<Answer> Answer { get; set; }
         public virtual DbSet<Question> Question { get; set; }
-        public virtual DbSet<QuestionAnswer> QuestionAnswer { get; set; }
         public virtual DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Data Source=qnaplatform.db");
+                optionsBuilder.UseSqlite("Data Source=AthenaeumDB.db");
             }
         }
     }

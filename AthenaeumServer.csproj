@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>qna_platform_server</RootNamespace>
+    <RootNamespace>AthenaeumSever</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
